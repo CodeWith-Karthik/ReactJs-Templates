@@ -1,0 +1,30 @@
+.student-detail {
+  width: 700px;
+  text-align: left;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  color: white;
+  background-color: #350086;
+}
+
+h3 {
+  color: orange;
+}
+
+.student-detail h3,
+p {
+  margin-bottom: 0.4rem;
+}
+
+.subject {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  margin: 0.4rem 0rem;
+}
