@@ -1,0 +1,7 @@
+dotnet restore
+dotnet build
+dotnet dev-certs https --trust
+dotnet dev-certs https --check
+dotnet run --launch-profile https
+
+url - https://localhost:5001/swagger/index.html
