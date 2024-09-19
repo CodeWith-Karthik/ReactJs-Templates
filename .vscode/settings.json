@@ -1,0 +1,3 @@
+{
+  "dotnet.defaultSolution": "HttpRequest/Backend/EmployeeManagement.sln"
+}
