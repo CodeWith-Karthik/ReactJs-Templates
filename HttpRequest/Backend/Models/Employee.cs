@@ -10,7 +10,7 @@
 
         public string EmailAddress { get; set; } = string.Empty;
 
-        public int PhoneNo { get; set; } 
+        public long PhoneNo { get; set; } 
 
     }
 }

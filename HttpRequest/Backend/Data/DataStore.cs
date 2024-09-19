@@ -4,7 +4,25 @@ namespace EmployeeManagement.Data
 {
     public static class DataStore
     {
-        private static List<Employee> employees = new();
+        private static List<Employee> employees = new()
+        {
+            new Employee
+            {
+                Id = Guid.NewGuid(),
+                Name = "Alex",
+                Age = 26,
+                EmailAddress = "alex@gmail.com",
+                PhoneNo = 9876543210
+            },
+            new Employee
+            {
+                Id = Guid.NewGuid(),
+                Name = "John",
+                Age = 32,
+                EmailAddress = "john@gmail.com",
+                PhoneNo = 9876543210
+            }
+        };
 
 
         public static List<Employee> GetEmployees()
