@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Employees({ employees, onEdit }) {
+export default function Employees({ employees, onEdit, onDelete }) {
   if (employees.length === 0) {
     return (
       <div>
@@ -39,7 +39,12 @@ export default function Employees({ employees, onEdit }) {
               >
                 Edit
               </button>
-              <button className="btn-delete">Delete</button>
+              <button
+                className="btn-delete"
+                onClick={() => onDelete(employee.id)}
+              >
+                Delete
+              </button>
             </div>
           </div>
         );

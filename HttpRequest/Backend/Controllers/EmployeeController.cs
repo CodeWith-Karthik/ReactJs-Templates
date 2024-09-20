@@ -40,7 +40,6 @@ namespace EmployeeManagement.Controllers
             return CreatedAtAction(nameof(GetEmployeeById), new { id = employeeId }, employee);
         }
 
-        // Update an existing employee
         [HttpPut("{id}")]
         public IActionResult UpdateEmployee(Guid id, [FromBody] Employee employee)
         {
@@ -59,7 +58,6 @@ namespace EmployeeManagement.Controllers
             return NoContent(); 
         }
 
-        // Delete an employee by Id
         [HttpDelete("{id}")]
         public IActionResult DeleteEmployee(Guid id)
         {

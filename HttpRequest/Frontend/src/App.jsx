@@ -46,13 +46,23 @@ function App() {
     setEmployee(null); // Clear the form after update
   };
 
+  const handleDelete = (id) => {
+    setEmployees((prevEmployees) =>
+      prevEmployees.filter((emp) => emp.id !== id)
+    );
+  };
+
   const handleReset = () => {
     setEmployee(null); // Switch back to "Add" mode
   };
 
   return (
     <div className="main-container">
-      <Employees employees={employees} onEdit={handleEdit} />
+      <Employees
+        employees={employees}
+        onEdit={handleEdit}
+        onDelete={handleDelete}
+      />
       <EmployeeUpsert
         employee={employee}
         onReset={handleReset}

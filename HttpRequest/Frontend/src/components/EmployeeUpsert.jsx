@@ -50,14 +50,23 @@ export default function EmployeeUpsert({ employee, onReset, onUpdate, onAdd }) {
       });
     } else {
       // If no employee is passed, reset form to empty values
-      onAdd(formState);
+      if (
+        formState.name &&
+        formState.age &&
+        formState.emailAddress &&
+        formState.phoneNo
+      ) {
+        onAdd(formState);
+        setFormState({
+          name: '',
+          age: '',
+          emailAddress: '',
+          phoneNo: '',
+        });
+      } else {
+        alert('Please Fill All Feild');
+      }
     }
-    setFormState({
-      name: '',
-      age: '',
-      emailAddress: '',
-      phoneNo: '',
-    });
   };
 
   const handleReset = () => {
